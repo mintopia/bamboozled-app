@@ -23,7 +23,7 @@ class Account extends Model
 {
     public function users()
     {
-        return $this->hasMany(\App\User::class);
+        return $this->belongsToMany(\App\User::class)->withTimestamps();
     }
     public function games()
     {
